@@ -8,8 +8,6 @@ import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.Toast;
 
-import java.util.jar.Attributes;
-
 public class MainActivity extends AppCompatActivity {
 EditText edt,edt1,edt2,edt3,edt4,edt5;
 RadioButton rd1,rd2;
@@ -70,12 +68,10 @@ Button btk;
                                        edt5.requestFocus();
                                        edt5.setError("FIELD CANNOT BE EMPTY");
                                    }
-                                   else if(rd1.isChecked())
-                                   {
-                                   }
+
                                    else
                                    {
-                                       Toast.makeText(MainActivity.this,"Validation Successful", Toast.LENGTH_LONG).show();
+                                       Toast.makeText(MainActivity.this,"registered Successfully", Toast.LENGTH_LONG).show();
                                    }
                                }
                            }
