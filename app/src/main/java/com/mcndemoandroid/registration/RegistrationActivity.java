@@ -10,8 +10,8 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
-import com.mcndemoandroid.ProfileActivity;
 import com.mcndemoandroid.R;
+import com.mcndemoandroid.profile.ProfileActivity;
 
 import java.util.regex.Matcher;
 
