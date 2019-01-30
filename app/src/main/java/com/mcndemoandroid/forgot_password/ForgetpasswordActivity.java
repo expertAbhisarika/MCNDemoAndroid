@@ -1,7 +1,9 @@
-package com.mcndemoandroid;
+package com.mcndemoandroid.forgot_password;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import com.mcndemoandroid.R;
 
 public class ForgetpasswordActivity extends AppCompatActivity {
 

@@ -8,7 +8,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.mcndemoandroid.ForgetpasswordActivity;
+import com.mcndemoandroid.forgot_password.ForgetpasswordActivity;
 import com.mcndemoandroid.R;
 import com.mcndemoandroid.registration.RegistrationActivity;
 
