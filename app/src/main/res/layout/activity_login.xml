@@ -2,12 +2,13 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-   >
+    >
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/image1"
-        android:layout_marginTop= ""
+        android:layout_marginLeft="35dp"
+
         />
     <RelativeLayout
         android:layout_width="wrap_content"
@@ -17,25 +18,26 @@
             android:layout_height="wrap_content"
             android:id="@+id/login"
             android:text="Login Form"
-            android:textSize="50dp"
+            android:textSize="60dp"
             android:layout_marginTop="250dp"
+            android:layout_marginLeft="20dp"
 
             />
         <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/edt1"
-        android:text="Email_id"
-        android:textSize="30dp"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/edt1"
+            android:hint="Email_id"
+            android:textSize="40dp"
             android:layout_below="@+id/login"
             />
         <EditText
-            android:layout_width="wrap_content"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:id="@+id/edt2"
-            android:text="Password"
+            android:hint="Password"
             android:layout_below="@+id/edt1"
-            android:textSize="30dp"/>
+            android:textSize="40dp"/>
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -52,6 +54,9 @@
             android:text="Forget Password"
             android:textSize="30dp"
             android:layout_marginTop="50dp"
+            android:onClick="forgotPassword"
+            android:clickable="true"
+
             android:layout_marginBottom="70dp"
             android:id="@+id/text1"/>
         <TextView
@@ -60,15 +65,15 @@
             android:id="@+id/text2"
             android:text="Register"
             android:layout_alignRight="@+id/text1"
-            android:layout_marginTop="575dp"
+            android:layout_marginTop="615dp"
             android:textSize="30dp"
             android:layout_alignParentRight="true"
 
 
             />
-</RelativeLayout>
+    </RelativeLayout>
 
 
-    
+
 
 </RelativeLayout>

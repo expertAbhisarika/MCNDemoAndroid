@@ -8,16 +8,14 @@ import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.Toast;
 
-import java.util.jar.Attributes;
-
-public class MainActivity extends AppCompatActivity {
+public class MainActivityOld extends AppCompatActivity {
 EditText edt,edt1,edt2,edt3,edt4,edt5;
 RadioButton rd1,rd2;
 Button btk;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_login);
         edt=(EditText)findViewById(R.id.edt);
         edt1=(EditText)findViewById(R.id.edt1);
         edt2=(EditText)findViewById(R.id.edt2);
@@ -75,7 +73,7 @@ Button btk;
                                    }
                                    else
                                    {
-                                       Toast.makeText(MainActivity.this,"Validation Successful", Toast.LENGTH_LONG).show();
+                                       Toast.makeText(MainActivityOld.this,"Validation Successful", Toast.LENGTH_LONG).show();
                                    }
                                }
                            }
