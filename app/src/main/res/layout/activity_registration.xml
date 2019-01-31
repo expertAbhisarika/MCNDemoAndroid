@@ -7,7 +7,8 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="#3aa8c1">
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -26,6 +27,7 @@
             android:layout_height="wrap_content"
             android:hint="FirstName"
             android:textSize="30dp"
+            android:background="@drawable/edit_text"
             android:textColorHint="@color/colorPrimary"
             android:paddingRight="20dp"
             android:paddingLeft="20dp"
@@ -37,13 +39,17 @@
             android:hint="LastName"
             android:textColorHint="@color/colorPrimary"
             android:textSize="30dp"
+            android:background="@drawable/edit_text"
             android:paddingLeft="20dp"
+            android:layout_marginTop="20dp"
             android:paddingRight="20dp"
             android:id="@+id/last_name"
             android:layout_below="@+id/first_name"/>
         <EditText
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/edit_text"
             android:hint="Email-id"
             android:textColorHint="@color/colorPrimary"
             android:textSize="30dp"
@@ -57,6 +63,9 @@
             android:hint="Password"
             android:textColorHint="@color/colorPrimary"
             android:textSize="30dp"
+            android:inputType="textPassword"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/edit_text"
             android:paddingLeft="20dp"
             android:paddingRight="20dp"
             android:id="@+id/password"
@@ -65,6 +74,9 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:hint="ConfirmPassword"
+            android:layout_marginTop="20dp"
+            android:inputType="textPassword"
+            android:background="@drawable/edit_text"
             android:textSize="30dp"
             android:textColorHint="@color/colorPrimary"
             android:paddingRight="20dp"
@@ -79,6 +91,8 @@
             android:textColorHint="@color/colorPrimary"
             android:paddingLeft="20dp"
             android:paddingRight="20dp"
+            android:background="@drawable/edit_text"
+            android:layout_marginTop="20dp"
             android:id="@+id/mobile_no"
             android:layout_below="@+id/confirm_pass"/>
         <TextView
@@ -89,6 +103,7 @@
             android:textSize="30dp"
             android:paddingLeft="20dp"
             android:paddingRight="20dp"
+            android:layout_marginTop="20dp"
             android:id="@+id/gender"
             android:layout_below="@+id/mobile_no"/>
 
@@ -119,6 +134,7 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:text="Login"
+        android:background="@drawable/button"
         android:textColor="@color/colorPrimaryDark"
         android:textSize="30dp"
         android:id="@+id/loginbtn"

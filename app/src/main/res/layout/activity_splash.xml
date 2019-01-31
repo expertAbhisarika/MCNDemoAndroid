@@ -5,5 +5,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".splash.SplashActivity">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#808080">
+    </RelativeLayout>
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/im"
+        android:src="@drawable/sp"/>
 
 </android.support.constraint.ConstraintLayout>

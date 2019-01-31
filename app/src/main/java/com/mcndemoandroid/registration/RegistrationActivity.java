@@ -82,7 +82,7 @@ public class RegistrationActivity extends AppCompatActivity {
 
             intent.putExtra("firstname", s);
             intent.putExtra("email", s2);
-            intent.putExtra("mobile no", s5);
+            intent.putExtra("mobile_no", s5);
             startActivity(intent);
 
         }
