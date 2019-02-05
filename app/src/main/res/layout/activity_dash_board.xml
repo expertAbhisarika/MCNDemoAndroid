@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Dashboard.DashBoardActivity">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/gradient_color">
+
+    </RelativeLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+      android:layout_centerHorizontal="true"
+        android:layout_marginTop="80dp"
+        android:id="@+id/dash"
+        android:text="DashBoard"
+        android:textColor="#a90323"
+        android:textSize="40dp"
+        android:textStyle="bold"/>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/img"
+        android:layout_width="100dp"
+        android:layout_height="110dp"
+        android:paddingLeft="20dp"
+        android:layout_below="@+id/dash"
+        android:clickable="true"
+        android:layout_marginTop="48dp"
+        android:src="@drawable/dp" />
+   <TextView
+        android:layout_width="wrap_content"
+       android:id="@+id/text1"
+        android:layout_height="wrap_content"
+        android:text="UserProfile"
+       android:clickable="true"
+        android:layout_below="@+id/img"
+       android:paddingLeft="20dp"
+        android:textSize="20dp"
+        android:textColor="#a90323"
+        android:layout_marginTop="10dp"/>
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="100dp"
+        android:layout_height="110dp"
+        android:id="@+id/img1"
+        android:layout_below="@id/dash"
+        android:layout_alignParentRight="true"
+        android:clickable="true"
+        android:paddingRight="20dp"
+        android:layout_marginTop="48dp"
+        android:src="@drawable/pass" />
+   <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Change Password"
+        android:textSize="20dp"
+        android:layout_below="@id/img"
+       android:id="@+id/text2"
+        android:layout_alignParentRight="true"
+       android:paddingRight="20dp"
+       android:clickable="true"
+       android:textColor="#a90323"
+        android:layout_marginTop="10dp"/>
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="100dp"
+        android:layout_height="110dp"
+        android:id="@+id/img2"
+        android:clickable="true"
+        android:src="@drawable/set"
+        android:layout_below="@+id/img"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="70dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Settings"
+        android:textSize="20dp"
+        android:id="@+id/text3"
+        android:layout_below="@id/img"
+        android:layout_marginTop="200dp"
+        android:clickable="true"
+        android:layout_centerHorizontal="true"
+        android:textColor="#a90323"/>
+
+
+</RelativeLayout>

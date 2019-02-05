@@ -11,6 +11,7 @@ import android.widget.RadioGroup;
 import android.widget.Toast;
 
 import com.mcndemoandroid.R;
+//import com.mcndemoandroid.models.User;
 import com.mcndemoandroid.profile.ProfileActivity;
 
 import java.util.regex.Matcher;
@@ -18,7 +19,7 @@ import java.util.regex.Matcher;
 public class RegistrationActivity extends AppCompatActivity {
     EditText firstname, lastname, email_id, pass, conf_pass, number;
     RadioButton male, female;
-    Button login;
+    Button submit;
     RadioGroup radioGroup;
     Matcher m;
 
@@ -34,14 +35,16 @@ public class RegistrationActivity extends AppCompatActivity {
         number = (EditText) findViewById(R.id.mobile_no);
         male = (RadioButton) findViewById(R.id.malerdo);
         female = (RadioButton) findViewById(R.id.femalerdo);
-        login = (Button) findViewById(R.id.loginbtn);
+        submit = (Button) findViewById(R.id.loginbtn);
 
     }
+
     public void callProfile(View view) {
 
-        String s, s1, s2, s3, s4, s5, s6, s7;
+        String s, s1, s2, s3, s4, s5, s6, s7, a;
         s = firstname.getText().toString();
         s1 = lastname.getText().toString();
+        a = s + s1;
         s2 = email_id.getText().toString();
         s3 = pass.getText().toString();
         s4 = conf_pass.getText().toString();
@@ -53,38 +56,53 @@ public class RegistrationActivity extends AppCompatActivity {
         if (s.length() == 0) {
             firstname.requestFocus();
             firstname.setError("This field cannot be empty");
-        }
-        if (s1.length() == 0) {
+        } else if (s1.length() == 0) {
             lastname.requestFocus();
             lastname.setError("This field cannot be empty");
-        }
-        if (s2.length() == 0) {
+        } else if (s2.length() == 0) {
             email_id.requestFocus();
             email_id.setError("This field cannot be empty");
-        }
-        if (s3.length() == 0) {
+        } else if (s3.length() == 0) {
             pass.requestFocus();
             pass.setError("This field cannot be empty");
-        }
-        if (s4.length() == 0) {
+        } else if (s4.length() == 0) {
             conf_pass.requestFocus();
             conf_pass.setError("This field cannot be empty");
-        }
-        if (s5.length() == 0) {
+        } else if (s5.length() == 0) {
             number.requestFocus();
             number.setError("This field cannot be empty");
         } else {
-            Toast.makeText(RegistrationActivity.this, "registered successfully", Toast.LENGTH_LONG).show();
+
+            if (s4.length() != 0) {
+                if (!s3.equals(s4)) {
+                    conf_pass.requestFocus();
+                    conf_pass.setError("incorrect password");
+                }
+                Toast.makeText(RegistrationActivity.this, "registered successfully", Toast.LENGTH_LONG).show();
 
 
-            // Creating Intent Object
-            Intent intent = new Intent(RegistrationActivity.this, ProfileActivity.class);
 
-            intent.putExtra("firstname", s);
-            intent.putExtra("email", s2);
-            intent.putExtra("mobile_no", s5);
-            startActivity(intent);
+                // Creating Intent Object
+                Intent intent = new Intent(RegistrationActivity.this, ProfileActivity.class);
+//
+//            User user = new User("Ashish","Tiwari","Ashish2468@gmail.com","9824287445");
+//            intent.putExtra("user",user);
+
+
+//            intent.putExtra("firstname", s);
+//            intent.putExtra("lastname",s1);
+                intent.putExtra("username", a);
+                intent.putExtra("email", s2);
+                intent.putExtra("mobile_no", s5);
+                startActivity(intent);
+            }
+
+
+
 
         }
     }
 }
+
+
+

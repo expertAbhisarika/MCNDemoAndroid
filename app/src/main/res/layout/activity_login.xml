@@ -3,74 +3,99 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     >
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/image1"
-        android:layout_marginLeft="35dp"
 
-        />
     <RelativeLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/login"
-            android:text="Login Form"
-            android:textSize="60dp"
-            android:layout_marginTop="250dp"
-            android:layout_marginLeft="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/gradient_color">
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="143dp"
+            android:layout_height="128dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="100dp"
+            android:src="@drawable/download"
 
             />
-        <EditText
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/edt1"
-            android:hint="Email_id"
-            android:textSize="40dp"
-            android:layout_below="@+id/login"
-            />
-        <EditText
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/edt2"
-            android:hint="Password"
-            android:layout_below="@+id/edt1"
-            android:textSize="40dp"/>
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/button"
-            android:layout_below="@+id/edt2"
-            android:layout_marginTop="25dp"
-            android:text="Login"
-            android:textSize="30dp"
-            />
+
         <TextView
+            android:id="@+id/login"
             android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:maxLines="1"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="150dp"
+            android:text="Login Form"
+            android:textSize="30dp"
+
+            />
+
+        <EditText
+            android:id="@+id/edt1"
+            android:layout_width="336dp"
+            android:layout_height="48dp"
+            android:layout_below="@+id/login"
+            android:maxLines="1"
+            android:layout_marginTop="20dp"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/text_round"
+            android:hint="Email_id"
+            android:textSize="20dp" />
+
+        <EditText
+            android:id="@+id/edt2"
+            android:layout_width="336dp"
+            android:layout_height="48dp"
+            android:layout_below="@+id/edt1"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/text_round"
+            android:hint="Password"
+            android:textSize="20dp" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/edt2"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="25dp"
+            android:onClick="callRegister"
+            android:background="@drawable/button_round"
+            android:text="Login"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/text1"
+            android:layout_width="175dp"
             android:layout_height="wrap_content"
             android:layout_below="@+id/button"
-            android:text="Forget Password"
-            android:textSize="30dp"
-            android:layout_marginTop="50dp"
-            android:onClick="forgotPassword"
-            android:clickable="true"
-
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="62dp"
             android:layout_marginBottom="70dp"
-            android:id="@+id/text1"/>
+            android:background="@drawable/button_round"
+            android:paddingLeft="15dp"
+            android:clickable="true"
+            android:onClick="callForget"
+            android:text="Forget Password"
+            android:textSize="20dp" />
+
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
             android:id="@+id/text2"
-            android:text="Register"
+            android:layout_width="112dp"
+            android:layout_height="wrap_content"
             android:layout_alignRight="@+id/text1"
-            android:layout_marginTop="615dp"
-            android:textSize="30dp"
             android:layout_alignParentRight="true"
-
-
-            />
+            android:layout_marginTop="465dp"
+            android:layout_marginRight="10dp"
+            android:clickable="true"
+            android:onClick="callRegisteration"
+            android:paddingLeft="10dp"
+            android:background="@drawable/button_round"
+            android:text="Register"
+            android:textSize="20dp" />
     </RelativeLayout>
 
 

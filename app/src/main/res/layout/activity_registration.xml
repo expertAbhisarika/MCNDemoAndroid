@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -8,142 +8,197 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#3aa8c1">
+        android:background="@drawable/gradient_color"
+        tools:layout_editor_absoluteX="38dp"
+        tools:layout_editor_absoluteY="0dp">
+
         <TextView
+            android:id="@+id/rgs"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Registration"
-            android:textColor="@color/colorPrimaryDark"
-            android:textSize="40dp"
-            android:scrollbars="vertical"
-            android:textAlignment="center"
-            android:id="@+id/rgs"
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
             android:layout_marginBottom="20dp"
-          />
+            android:scrollbars="vertical"
+            android:text="Registration"
+            android:layout_marginTop="20dp"
+            android:textAlignment="center"
+            android:textColor="#000807"
+            android:textSize="30dp" />
+
         <EditText
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:hint="FirstName"
-            android:textSize="30dp"
-            android:background="@drawable/edit_text"
-            android:textColorHint="@color/colorPrimary"
-            android:paddingRight="20dp"
-            android:paddingLeft="20dp"
             android:id="@+id/first_name"
-            android:layout_below="@+id/rgs"/>
-        <EditText
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:hint="LastName"
-            android:textColorHint="@color/colorPrimary"
-            android:textSize="30dp"
-            android:background="@drawable/edit_text"
+            android:layout_width="330dp"
+            android:layout_height="30dp"
+            android:layout_below="@+id/rgs"
+            android:maxLines="1"
+            android:layout_marginTop="3dp"
+            android:background="@drawable/text_round"
+            android:maxLength="10"
+            android:inputType="textPersonName"
+            android:drawablePadding="15dp"
+            android:hint="FirstName"
+            android:drawableLeft="@drawable/user"
+            android:layout_centerHorizontal="true"
             android:paddingLeft="20dp"
-            android:layout_marginTop="20dp"
             android:paddingRight="20dp"
+            android:textColorHint="@color/colorPrimary"
+            android:textSize="20dp" />
+
+        <EditText
             android:id="@+id/last_name"
-            android:layout_below="@+id/first_name"/>
-        <EditText
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="330dp"
+            android:layout_height="30dp"
+            android:layout_below="@+id/first_name"
+            android:layout_centerHorizontal="true"
+            android:drawablePadding="15dp"
+            android:maxLines="1"
             android:layout_marginTop="20dp"
-            android:background="@drawable/edit_text"
-            android:hint="Email-id"
+            android:background="@drawable/text_round"
+            android:hint="LastName"
+            android:maxLength="10"
+            android:inputType="textPersonName"
             android:textColorHint="@color/colorPrimary"
-            android:textSize="30dp"
-            android:paddingRight="20dp"
+            android:drawableLeft="@drawable/user"
             android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:textSize="20dp" />
+
+        <EditText
             android:id="@+id/email"
-            android:layout_below="@+id/last_name"/>
-        <EditText
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:hint="Password"
-            android:textColorHint="@color/colorPrimary"
-            android:textSize="30dp"
-            android:inputType="textPassword"
+            android:layout_width="330dp"
+            android:layout_height="30dp"
+            android:layout_below="@+id/last_name"
+            android:drawablePadding="15dp"
             android:layout_marginTop="20dp"
-            android:background="@drawable/edit_text"
+            android:maxLines="1"
+            android:background="@drawable/text_round"
+            android:layout_centerHorizontal="true"
+            android:hint="Email-id"
+            android:drawableLeft="@drawable/em"
             android:paddingLeft="20dp"
+            android:layout_marginStart="30dp"
             android:paddingRight="20dp"
+            android:textColorHint="@color/colorPrimary"
+            android:textSize="20dp" />
+
+        <EditText
             android:id="@+id/password"
-            android:layout_below="@+id/email"/>
-        <EditText
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:hint="ConfirmPassword"
-            android:layout_marginTop="20dp"
+            android:layout_width="330dp"
+            android:layout_height="30dp"
+            android:layout_below="@+id/email"
+            android:background="@drawable/text_round"
+            android:hint="Password"
+            android:layout_centerHorizontal="true"
+            android:textColorHint="@color/colorPrimary"
+            android:textSize="20dp"
             android:inputType="textPassword"
-            android:background="@drawable/edit_text"
-            android:textSize="30dp"
-            android:textColorHint="@color/colorPrimary"
-            android:paddingRight="20dp"
-            android:paddingLeft="20dp"
-            android:id="@+id/confirm_pass"
-            android:layout_below="@+id/password"/>
-        <EditText
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:hint="Mobile No."
-            android:textSize="30dp"
-            android:textColorHint="@color/colorPrimary"
-            android:paddingLeft="20dp"
-            android:paddingRight="20dp"
-            android:background="@drawable/edit_text"
+            android:maxLength="10"
             android:layout_marginTop="20dp"
+            android:drawableLeft="@drawable/lock"
+            android:maxLines="1"
+            android:drawablePadding="15dp"
+            android:layout_marginStart="30dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp" />
+
+        <EditText
+            android:id="@+id/confirm_pass"
+            android:layout_width="330dp"
+            android:layout_height="30dp"
+            android:layout_below="@+id/password"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/text_round"
+            android:maxLength="10"
+            android:layout_centerHorizontal="true"
+            android:drawableLeft="@drawable/lock"
+            android:drawablePadding="15dp"
+            android:hint="ConfirmPassword"
+            android:maxLines="1"
+            android:paddingRight="20dp"
+            android:inputType="textPassword"
+            android:paddingLeft="20dp"
+            android:textColorHint="@color/colorPrimary"
+            android:textSize="20dp" />
+
+        <EditText
             android:id="@+id/mobile_no"
-            android:layout_below="@+id/confirm_pass"/>
+            android:layout_width="330dp"
+            android:layout_height="30dp"
+            android:layout_below="@+id/confirm_pass"
+            android:layout_marginTop="20dp"
+            android:drawablePadding="15dp"
+            android:background="@drawable/text_round"
+            android:layout_centerHorizontal="true"
+            android:drawableLeft="@drawable/cell"
+            android:maxLines="1"
+            android:hint="Mobile No."
+            android:maxLength="10"
+            android:layout_marginStart="30dp"
+            android:inputType="number"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:textColorHint="@color/colorPrimary"
+            android:textSize="20dp" />
+
+
         <TextView
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
+            android:id="@+id/gender"
+            android:layout_width="330dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="30dp"
+            android:layout_below="@+id/mobile_no"
+            android:layout_marginTop="10dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
             android:text="Gender"
             android:textColor="@color/colorPrimary"
-            android:textSize="30dp"
-            android:paddingLeft="20dp"
-            android:paddingRight="20dp"
-            android:layout_marginTop="20dp"
-            android:id="@+id/gender"
-            android:layout_below="@+id/mobile_no"/>
+            android:textSize="20dp" />
 
-<RadioGroup
-    android:layout_width="fill_parent"
-    android:layout_height="wrap_content"
-    android:id="@+id/radiogrp"
-    android:layout_below="@+id/gender"
-    android:paddingLeft="20dp"
-    android:paddingRight="20dp"
-    >
-    <RadioButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Male"
-        android:textColor="@color/colorAccent"
-        android:textSize="25dp"
-        android:id="@+id/malerdo"
-        />
-    <RadioButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Female"
-        android:textColor="@color/colorAccent"
-        android:textSize="25dp"
-        android:id="@+id/femalerdo"/>
-    <Button
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:text="Login"
-        android:background="@drawable/button"
-        android:textColor="@color/colorPrimaryDark"
-        android:textSize="30dp"
-        android:id="@+id/loginbtn"
-        android:paddingLeft="20dp"
-        android:paddingRight="20dp"
-        android:onClick="callProfile"
-        android:layout_marginTop="10dp"/>
-</RadioGroup>
+        <RadioGroup
+            android:id="@+id/radiogrp"
+            android:layout_width="351dp"
+            android:layout_height="148dp"
+            android:layout_below="@+id/gender"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="-1dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp">
+
+            <RadioButton
+                android:id="@+id/malerdo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Male"
+                android:textColor="#010b13"
+                android:textSize="20dp" />
+
+            <RadioButton
+                android:id="@+id/femalerdo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Female"
+                android:textColor="#010b13"
+                android:textSize="20dp" />
+
+            <Button
+                android:id="@+id/loginbtn"
+                android:layout_width="201dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="90dp"
+                android:background="@drawable/button_round"
+                android:clickable="true"
+                android:onClick="callProfile"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:text="Submit"
+                android:textColor="@color/colorPrimary"
+                android:textSize="20dp" />
+        </RadioGroup>
 
 
     </RelativeLayout>
-</android.support.constraint.ConstraintLayout>
+</RelativeLayout>
